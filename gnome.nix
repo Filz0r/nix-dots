@@ -26,19 +26,20 @@
     gnome.nautilus
     gnome.nautilus-python
     nautilus-open-any-terminal
-    nautilus-open-in-blackbox
+#    nautilus-open-in-blackbox
     gnome.sushi
     gnome.gnome-calendar
     gnome.seahorse
     gnome.cheese
     gnome.gnome-system-monitor
-    blackbox-terminal
-    turtle
+#    blackbox-terminal
+#    turtle
     epiphany
     
     #Extensions 
     gnomeExtensions.dash-to-dock
-
+    gnomeExtensions.tray-icons-reloaded
+    
     # Theme
     tela-circle-icon-theme
     gruvbox-gtk-theme # gtk theme for gnome
