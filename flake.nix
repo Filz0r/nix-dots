@@ -50,7 +50,11 @@
                     # First enable, enroll, copy blob onto the directory of the git repo
                     #nixos-06cb-009a-fingerprint-sensor.nixosModules.open-fprintd
                     #nixos-06cb-009a-fingerprint-sensor.nixosModules.python-validity
-		                # Example of adding nix-nvim overlay into your configuration
+
+                    # Import home-manager module
+                    homePkgs.home-manager.nixosModules.home-manager
+		                
+                    # Example of adding nix-nvim overlay into your configuration
                     {
                       nixpkgs.config.allowUnfree = true;
                       #unstablePkgs.config.allowUnfree = true;
@@ -60,6 +64,8 @@
                         unstablePkgs.warp-terminal
                         unstablePkgs.zed-editor
                       ];
+
+                      #Enable home-manager
                       home-manager.useGlobalPkgs = true;
                       home-manager.useUserPackages = true;
                       home-manager.users.filipe = import ./home.nix;
@@ -69,6 +75,7 @@
                 # Then enable this
                 specialArgs = {
                     nixos-06cb-009a-fingerprint-sensor = nixos-06cb-009a-fingerprint-sensor;
+                    home-manager = homePkgs.home-manager;
                 };
             };
         };
