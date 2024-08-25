@@ -11,7 +11,7 @@
   # Set the shell for the user
   programs.zsh = {
     enable = true;
-    enableAutosuggestions.enable = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     oh-my-zsh = {
       enable = true;
