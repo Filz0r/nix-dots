@@ -18,11 +18,16 @@
       theme = "robbyrussell";
       plugins = [
         "git"
+        "docker"
         "npm"
         "history"
         "node"
         "rust"
         "deno"
+        "copyfile"
+        "web-search"
+        "copydir"
+        "dirhistory"
       ];
    };
   };
