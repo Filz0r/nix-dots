@@ -9,13 +9,17 @@
             url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
             inputs.nixpkgs.follows = "nixos-23-11";
         };
-	nix-nvim = {
-		url = "github:Filz0r/nix-nvim";
-		inputs.nixpkgs.follows = "nixpkgs-unstable";
-	};
+	      nix-nvim = {
+		        url = "github:Filz0r/nix-nvim";
+		        inputs.nixpkgs.follows = "nixpkgs-unstable";
+	      };
+        home-manager = {
+            url = "github:nix-community/home-manager";
+            inputs.nixpkgs.follows = "nixpkgs-unstable";
+        };
     };
 
-    outputs = { self, nixpkgs, nixos-23-11, nixos-06cb-009a-fingerprint-sensor,	nix-nvim, nixpkgs-unstable, ... } :
+    outputs = { self, nixpkgs, nixos-23-11, nixos-06cb-009a-fingerprint-sensor,	nix-nvim, nixpkgs-unstable, home-manager, ... } :
         let
             lib = nixpkgs.lib;
 	          system = "x86_64-linux";  # Define the system architecture
@@ -32,6 +36,10 @@
             unstablePkgs = import nixpkgs-unstable {
               inherit system;
               config.allowUnfree = true;
+            };
+            homePkgs = import home-manager {
+                inherit system;
+                modules = [ home-manager.nixosModules.home-manager ];
             };
         in {
         nixosConfigurations = {
@@ -52,6 +60,9 @@
                         unstablePkgs.warp-terminal
                         unstablePkgs.zed-editor
                       ];
+                      home-manager.useGlobalPkgs = true;
+                      home-manager.useUserPackages = true;
+                      home-manager.users.filipe = import ./home.nix;
                     }	
 
                 ];

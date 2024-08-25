@@ -3,7 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 
-{ config, pkgs, lib ,nixos-06cb-009a-fingerprint-sensor, ... }:
+{ config, pkgs, lib ,nixos-06cb-009a-fingerprint-sensor, home-manager,... }:
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -15,6 +15,7 @@
       ./terminal-tools.nix
       ./fingerprint-gdm.nix
       ./desktop-apps.nix
+      home-manager.nixosModules.home-manager
     ];
 
   # Bootloader.
