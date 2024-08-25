@@ -40,6 +40,7 @@
     #Extensions 
     gnomeExtensions.dash-to-dock
     gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.blur-my-shell
     
     # Theme
     tela-circle-icon-theme
