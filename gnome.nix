@@ -32,6 +32,7 @@
     gnome.seahorse
     gnome.cheese
     gnome.gnome-system-monitor
+    gnome.loupe
 #    blackbox-terminal
 #    turtle
     epiphany
