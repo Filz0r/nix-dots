@@ -10,6 +10,9 @@
     mpv
     pika-backup
     thunderbird
+    kitty
+    kitty-img
+    kitty-themes
  ];
 
 }
