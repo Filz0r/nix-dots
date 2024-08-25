@@ -17,6 +17,14 @@
     enableSyntaxHighlighting = true;
   };
 
+  # Ensure Zsh is set as the default login shell
+  home.activation.setZshAsDefaultShell = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    if [ "$(basename "$SHELL")" != "zsh" ]; then
+      chsh -s ${pkgs.zsh}/bin/zsh
+    fi
+  '';
+
+
   # Enable some common programs
   programs.bash.enable = true;
 

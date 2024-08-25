@@ -113,7 +113,6 @@ services.smartd = {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.filipe = {
     isNormalUser = true;
-    shell = pkgs.zsh;
     description = "filipe";
     extraGroups = [ "networkmanager" "wheel" ];
   };
