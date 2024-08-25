@@ -36,7 +36,6 @@
 
   # Define user-specific packages
   home.packages = with pkgs; [
-    chsh
     tmux
     # Add other packages you want to install for your user here
   ];
