@@ -11,10 +11,20 @@
   # Set the shell for the user
   programs.zsh = {
     enable = true;
-    oh-my-zsh.enable = true;
-    oh-my-zsh.theme = "agnoster";
-    autosuggestion.enable = true;
+    enableAutosuggestions.enable = true;
     syntaxHighlighting.enable = true;
+    oh-my-zsh = {
+      enable = true;
+      theme = "robbyrussell";
+      plugins = [
+        "git"
+        "npm"
+        "history"
+        "node"
+        "rust"
+        "deno"
+      ];
+   };
   };
 
   # Ensure Zsh is set as the default login shell
