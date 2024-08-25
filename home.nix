@@ -20,7 +20,7 @@
   # Ensure Zsh is set as the default login shell
   home.activation.setZshAsDefaultShell = lib.hm.dag.entryAfter ["writeBoundary"] ''
     if [ "$(basename "$SHELL")" != "zsh" ]; then
-      chsh -s ${pkgs.zsh}/bin/zsh
+      /run/wrappers/bin/chsh -s ${pkgs.zsh}/bin/zsh
     fi
   '';
 
