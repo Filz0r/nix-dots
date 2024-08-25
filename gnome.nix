@@ -35,7 +35,12 @@
     blackbox-terminal
     turtle
     epiphany
+    
+    #Extensions 
+    gnomeExtensions.dash-to-dock
 
+    # Theme
+    tela-circle-icon-theme
     gruvbox-gtk-theme # gtk theme for gnome
   ];
 
