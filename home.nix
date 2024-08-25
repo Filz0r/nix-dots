@@ -26,7 +26,6 @@
         "deno"
         "copyfile"
         "web-search"
-        "copydir"
         "dirhistory"
       ];
    };
