@@ -32,7 +32,7 @@
     gnome.seahorse
     gnome.cheese
     gnome.gnome-system-monitor
-    eog
+    gnome.eog
 #    blackbox-terminal
 #    turtle
     epiphany
