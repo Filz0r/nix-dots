@@ -13,8 +13,8 @@
     enable = true;
     oh-my-zsh.enable = true;
     oh-my-zsh.theme = "agnoster";
-    enableAutosuggestions = true;
-    enableSyntaxHighlighting = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
   };
 
   # Ensure Zsh is set as the default login shell
@@ -36,6 +36,7 @@
 
   # Define user-specific packages
   home.packages = with pkgs; [
+    chsh
     tmux
     # Add other packages you want to install for your user here
   ];
