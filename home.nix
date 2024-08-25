@@ -18,6 +18,7 @@
       ll = "ls -l";
       lla = "ls -la";
       ".." = "cd ..";
+      update = "cd ~/.nix; sudo nixos-rebuild --flake . --impure switch";
     };
     history = {
       size = 10000;
