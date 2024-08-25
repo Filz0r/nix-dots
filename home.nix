@@ -15,7 +15,6 @@
     oh-my-zsh.theme = "agnoster";
     enableAutosuggestions = true;
     enableSyntaxHighlighting = true;
-    loginShell = true;  # Ensures Zsh is the default shell
   };
 
   # Enable some common programs
