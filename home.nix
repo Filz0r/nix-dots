@@ -43,6 +43,10 @@
    };
   };
 
+  programs.kitty.keybindings = {
+    "ctrl+tab" = "nth_window -1";
+  }
+
   # Ensure Zsh is set as the default login shell
   home.activation.setZshAsDefaultShell = lib.hm.dag.entryAfter ["writeBoundary"] ''
     if [ "$(basename "$SHELL")" != "zsh" ]; then
