@@ -15,9 +15,13 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      lr = "ls -lR";
+      lra = "ls -lRa";
       ll = "ls -l";
       lla = "ls -la";
       ".." = "cd ..";
+      nv = "nvim";
+      icat = "kitty +kitten icat";
       update = "cd ~/.nix; sudo nixos-rebuild --flake . --impure switch";
     };
     history = {
@@ -27,7 +31,7 @@
 
     oh-my-zsh = {
       enable = true;
-      theme = "robbyrussell";
+      theme = "alanpeabody";
       plugins = [
         "git"
         "docker"
@@ -43,8 +47,19 @@
    };
   };
 
-  programs.kitty.keybindings = {
-    "ctrl+tab" = "nth_window -1";
+  programs.kitty = {
+    keybindings = {
+      "ctrl+shift+tab" = "nth_window -1";
+    };
+    shellIntegration.enableBashIntegration = true;
+    shellIntegration.enableZshIntegration = true;
+    font.package = "fira-code";
+    settings = {
+      scrollback_lines = 25000;
+      enable_audio_bell = false;
+      update_check_interval = 0;
+    };
+
   };
 
   # Ensure Zsh is set as the default login shell
