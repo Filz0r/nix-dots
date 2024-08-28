@@ -12,7 +12,7 @@
   gcc
   glibc
   man-pages
-  jetbrains.clion
+  #jetbrains.clion
  ];
 
 }

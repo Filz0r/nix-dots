@@ -68,6 +68,7 @@
                         nvim-pkg
                         unstablePkgs.warp-terminal
                         unstablePkgs.zed-editor
+                        unstablePkgs.jetbrains.clion
                       ];
                     }	
 
