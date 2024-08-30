@@ -118,7 +118,7 @@ services.smartd = {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "filipe";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" ];
   };
 
 
