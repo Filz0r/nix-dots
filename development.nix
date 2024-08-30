@@ -12,6 +12,7 @@
   gcc
   glibc
   man-pages
+  thony
   #jetbrains.clion
  ];
 
