@@ -37,10 +37,10 @@
               inherit system;
               config.allowUnfree = true;
             };
-            homePkgs = import home-manager {
-                inherit system;
-                modules = [ home-manager.nixosModules.home-manager ];
-            };
+#            homePkgs = import home-manager {
+#                inherit system;
+#                modules = [ home-manager.nixosModules.home-manager ];
+#            };
         in {
         nixosConfigurations = {
             ChadBook = lib.nixosSystem {
