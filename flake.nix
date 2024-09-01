@@ -66,11 +66,12 @@
 
                       environment.systemPackages = with pkgs; [
                         nvim-pkg
+                        home-manager
                         unstablePkgs.warp-terminal
                         unstablePkgs.zed-editor
                         unstablePkgs.jetbrains.clion
                       ];
-                    }	
+                    }
 
                 ];
                 # Then enable this
