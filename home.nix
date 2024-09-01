@@ -55,6 +55,11 @@
       "ctrl+right" = "neighboring_window right";
       "ctrl+up" = "neighboring_window up";
       "ctrl+down" = "neighboring_window down";
+      #move window in the indicated direction
+      "shift+up" = "move_window up";
+      "shift+left" = "move_window left";
+      "shift+right" = "move_window right";
+      "shift+down" = "move_window down";
     };
     shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
