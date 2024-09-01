@@ -50,6 +50,11 @@
   programs.kitty = {
     keybindings = {
       "ctrl+shift+tab" = "nth_window -1";
+      #Switch focus to the neighboring window in the indicated direction
+      "ctrl+left" = " neighboring_window left";
+      "ctrl+right" = "neighboring_window right";
+      "ctrl+up" = "neighboring_window up";
+      "ctrl+down" = "neighboring_window down";
     };
     shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
