@@ -16,7 +16,7 @@
       ./fingerprint-gdm.nix
       ./desktop-apps.nix
     ];
-  programs.home-manager.enable = true;
+ # programs.home-manager.enable = true;
   # Bootloader.
 
 services.smartd = {
