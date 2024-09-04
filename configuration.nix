@@ -3,7 +3,7 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 
-{ config, pkgs, lib ,nixos-06cb-009a-fingerprint-sensor, ... }:
+{ config, pkgs, lib, home-manager, ... }:
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -16,14 +16,14 @@
       ./fingerprint-gdm.nix
       ./desktop-apps.nix
     ];
-
+  programs.home-manager.enable = true;
   # Bootloader.
 
 services.smartd = {
     enable = true;
     devices = [
       {
-        device = "/dev/nvme0n1"; 
+        device = "/dev/nvme0n1";
       }
     ];
   };
@@ -56,7 +56,7 @@ services.smartd = {
 
     };
 
-  
+
   networking.hostName = "ChadBook"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
