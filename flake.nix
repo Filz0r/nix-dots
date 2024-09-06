@@ -51,15 +51,7 @@
                     #nixos-06cb-009a-fingerprint-sensor.nixosModules.open-fprintd
                     #nixos-06cb-009a-fingerprint-sensor.nixosModules.python-validity
 
-                    # Setup home-manager
-                    home-manager.nixosModules.home-manager
-                    {
-                      home-manager.useGlobalPkgs = true;
-                      home-manager.useUserPackages = true;
-                      home-manager.users.filipe = import ./home.nix;
-                    }
-
-		                # Enabling my nvim-pkg flake and adding unstable packages
+ 		                # Enabling my nvim-pkg flake and adding unstable packages
                     {
                       nixpkgs.config.allowUnfree = true;
                       #unstablePkgs.config.allowUnfree = true;
@@ -79,6 +71,12 @@
                     nixos-06cb-009a-fingerprint-sensor = nixos-06cb-009a-fingerprint-sensor;
                 };
             };
+        };
+        homeConfigurations = {
+          filipe = home-manager.lib.homeManagerConfiguration {
+            system = "x86_64-linux"; 
+            modules = [ ./home.nix ];
+          };
         };
     };
 }
