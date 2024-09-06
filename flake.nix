@@ -37,6 +37,7 @@
               inherit system;
               config.allowUnfree = true;
             };
+            homepkgs = nixpkgs.legacyPackages.${system};
 #            homePkgs = import home-manager {
 #                inherit system;
 #                modules = [ home-manager.nixosModules.home-manager ];
@@ -74,7 +75,7 @@
         };
         homeConfigurations = {
           filipe = home-manager.lib.homeManagerConfiguration {
-            system = "x86_64-linux"; 
+            inherit system; 
             modules = [ ./home.nix ];
           };
         };
