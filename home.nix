@@ -47,6 +47,29 @@
    };
   };
 
+  # Ensure Zsh is set as the default login shell
+  home.activation.setZshAsDefaultShell = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    if [ "$(basename "$SHELL")" != "zsh" ]; then
+      /run/wrappers/bin/chsh -s ${pkgs.zsh}/bin/zsh
+    fi
+  '';
+
+
+  # Enable some common programs
+  programs.bash.enable = true;
+
+  # Set up some environment variables
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    MY_VAR = "curl parrot.live";
+  };
+
+  # Define user-specific packages
+  home.packages = with pkgs; [
+    kitty
+    tmux
+    # Add other packages you want to install for your user here
+  ];
   programs.kitty = {
     keybindings = {
       "ctrl+shift+tab" = "nth_window -1";
@@ -72,29 +95,6 @@
 
   };
 
-  # Ensure Zsh is set as the default login shell
-  home.activation.setZshAsDefaultShell = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    if [ "$(basename "$SHELL")" != "zsh" ]; then
-      /run/wrappers/bin/chsh -s ${pkgs.zsh}/bin/zsh
-    fi
-  '';
-
-
-  # Enable some common programs
-  programs.bash.enable = true;
-
-  # Set up some environment variables
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    MY_VAR = "curl parrot.live";
-  };
-
-  # Define user-specific packages
-  home.packages = with pkgs; [
-    kitty
-    tmux
-    # Add other packages you want to install for your user here
-  ];
 
   # Example configuration for managing dotfiles
 #  home.file.".zshrc".source = ./dotfiles/zshrc;
