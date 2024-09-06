@@ -47,8 +47,7 @@
    };
   };
 
-  home.packages.kitty = {
-    enable = true;
+  programs.kitty = {
     keybindings = {
       "ctrl+shift+tab" = "nth_window -1";
       #Switch focus to the neighboring window in the indicated direction
@@ -92,6 +91,7 @@
 
   # Define user-specific packages
   home.packages = with pkgs; [
+    kitty
     tmux
     # Add other packages you want to install for your user here
   ];
