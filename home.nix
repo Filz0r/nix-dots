@@ -47,7 +47,7 @@
    };
   };
 
-  programs.kitty = {
+  home.packages.kitty = {
     enable = true;
     keybindings = {
       "ctrl+shift+tab" = "nth_window -1";
