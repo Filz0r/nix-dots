@@ -48,6 +48,7 @@
   };
 
   programs.kitty = {
+    enable = true;
     keybindings = {
       "ctrl+shift+tab" = "nth_window -1";
       #Switch focus to the neighboring window in the indicated direction
