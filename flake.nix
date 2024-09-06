@@ -59,7 +59,7 @@
 
                       environment.systemPackages = with pkgs; [
                         nvim-pkg
-                        home-manager
+#                        home-manager
                         unstablePkgs.warp-terminal
                         unstablePkgs.zed-editor
                         unstablePkgs.jetbrains.clion
