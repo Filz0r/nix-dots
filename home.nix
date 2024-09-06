@@ -74,28 +74,28 @@
     keybindings = {
 #      "ctrl+shift+tab" = "nth_window -1";
       #Switch focus to the neighboring window in the indicated direction
-      "ctrl+left" = " neighboring_window left";
-      "ctrl+right" = "neighboring_window right";
-      "ctrl+up" = "neighboring_window up";
-      "ctrl+down" = "neighboring_window down";
+      #"ctrl+left" = " neighboring_window left";
+      #"ctrl+right" = "neighboring_window right";
+      #"ctrl+up" = "neighboring_window up";
+      #"ctrl+down" = "neighboring_window down";
       #move window in the indicated direction
-      "shift+up" = "move_window up";
-      "shift+left" = "move_window left";
-      "shift+right" = "move_window right";
-      "shift+down" = "move_window down";
+      #"shift+up" = "move_window up";
+      #"shift+left" = "move_window left";
+      #"shift+right" = "move_window right";
+      #"shift+down" = "move_window down";
     };
     shellIntegration.enableBashIntegration = true;
     shellIntegration.enableZshIntegration = true;
     font.package = "fira-code";
-    settings = {
+
+
+  };
+
+  programs.kitty.settings = {
       scrollback_lines = 25000;
       enable_audio_bell = false;
       update_check_interval = 0;
     };
-
-  };
-
-
   # Example configuration for managing dotfiles
 #  home.file.".zshrc".source = ./dotfiles/zshrc;
 
