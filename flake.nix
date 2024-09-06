@@ -75,7 +75,7 @@
         };
         homeConfigurations = {
           filipe = home-manager.lib.homeManagerConfiguration {
-            inherit system; 
+            inherit homepkgs; 
             modules = [ ./home.nix ];
           };
         };
