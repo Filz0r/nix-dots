@@ -37,7 +37,6 @@
               inherit system;
               config.allowUnfree = true;
             };
-            homepkgs = nixpkgs.legacyPackages.${system};
         in {
         nixosConfigurations = {
             ChadBook = lib.nixosSystem {
@@ -51,8 +50,6 @@
  		                # Enabling my nvim-pkg flake and adding unstable packages
                     {
                       nixpkgs.config.allowUnfree = true;
-                      #unstablePkgs.config.allowUnfree = true;
-
                       environment.systemPackages = with pkgs; [
                         nvim-pkg
 #                        home-manager
@@ -61,13 +58,19 @@
                         unstablePkgs.jetbrains.clion
                       ];
                     }
-                    home-manager
 
+                    home-manager.nixosModules.home-manager {
+                      home-manager.useGlobalPkgs = true;
+                      home-manager.useUserPackages = true;
+
+                      home-manager.users.filipe = import ./home.nix;
+
+
+                    }
                 ];
                 # Then enable this
                 specialArgs = {
                     nixos-06cb-009a-fingerprint-sensor = nixos-06cb-009a-fingerprint-sensor;
-                    home-manager = home-manager;
                 };
             };
         };
