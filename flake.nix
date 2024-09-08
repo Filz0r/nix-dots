@@ -17,6 +17,7 @@
             url = "github:nix-community/home-manager/release-24.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        zen-browser.url = "github:MarceColl/zen-browser-flake";
     };
 
     outputs = { self, nixpkgs, nixos-23-11, nixos-06cb-009a-fingerprint-sensor,	nix-nvim, nixpkgs-unstable, home-manager, ... } :
@@ -78,11 +79,11 @@
             inherit homepkgs; 
             modules = [
               ./home.nix 
-              {
-                  home-manager.useGlobalPkgs = true;
-                  home-manager.useUserPackages = true;
-                  home-manager.users.filipe = import ./home.nix;
-              }
+#              {
+#                  home-manager.useGlobalPkgs = true;
+#                  home-manager.useUserPackages = true;
+#                  home-manager.users.filipe = import ./home.nix;
+#              }
             ];
           };
         };

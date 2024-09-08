@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, zen-browser, ... }:
 
 {
   home.username = "filipe";
@@ -68,10 +68,11 @@
   home.packages = with pkgs; [
     kitty
     tmux
+    zen-browser.packages."${system}".generic
     # Add other packages you want to install for your user here
   ];
-  programs.kitty = {
-    keybindings = {
+#  programs.kitty = {
+#    keybindings = {
 #      "ctrl+shift+tab" = "nth_window -1";
       #Switch focus to the neighboring window in the indicated direction
       #"ctrl+left" = " neighboring_window left";
@@ -83,19 +84,19 @@
       #"shift+left" = "move_window left";
       #"shift+right" = "move_window right";
       #"shift+down" = "move_window down";
-    };
-    shellIntegration.enableBashIntegration = true;
-    shellIntegration.enableZshIntegration = true;
-    font.package = "fira-code";
+#    };
+#    shellIntegration.enableBashIntegration = true;
+#    shellIntegration.enableZshIntegration = true;
+#    font.package = "fira-code";
 
 
-  };
+ # };
 
-  programs.kitty.settings = {
-      scrollback_lines = 25000;
-      enable_audio_bell = false;
-      update_check_interval = 0;
-    };
+  #programs.kitty.settings = {
+  #    scrollback_lines = 25000;
+  #    enable_audio_bell = false;
+  #    update_check_interval = 0;
+  #  };
   # Example configuration for managing dotfiles
 #  home.file.".zshrc".source = ./dotfiles/zshrc;
 
