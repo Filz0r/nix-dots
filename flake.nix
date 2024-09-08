@@ -20,7 +20,7 @@
         zen-browser.url = "github:MarceColl/zen-browser-flake";
     };
 
-    outputs = { self, nixpkgs, nixos-23-11, nixos-06cb-009a-fingerprint-sensor,	nix-nvim, nixpkgs-unstable, home-manager, ... } :
+    outputs = { self, nixpkgs, nixos-23-11, nixos-06cb-009a-fingerprint-sensor,	nix-nvim, nixpkgs-unstable, home-manager, zen-browser, ... } :
         let
             lib = nixpkgs.lib;
 	          system = "x86_64-linux";  # Define the system architecture
