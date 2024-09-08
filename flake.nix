@@ -82,6 +82,7 @@
             ];
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.users.filipe = import ./home.nix;
           };
         };
     };
