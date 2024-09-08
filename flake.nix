@@ -56,7 +56,7 @@
                         unstablePkgs.warp-terminal
                         unstablePkgs.zed-editor
                         unstablePkgs.jetbrains.clion
-                        inputs.zen-browser.packages."${system}".generic
+                        zen-browser.packages."${system}".generic
                       ];
                     }
 

@@ -1,4 +1,4 @@
-{ config, pkgs, lib, zen-browser, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.username = "filipe";
@@ -68,7 +68,6 @@
   home.packages = with pkgs; [
     kitty
     tmux
-    zen-browser.packages."${system}".generic
     # Add other packages you want to install for your user here
   ];
 #  programs.kitty = {
