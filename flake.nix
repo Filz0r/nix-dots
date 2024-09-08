@@ -40,7 +40,7 @@
         in {
         nixosConfigurations = {
             ChadBook = lib.nixosSystem {
-                system = "x86_64-linux";
+                inherit system;
                 modules = [
                     ./configuration.nix
                     # First enable, enroll, copy blob onto the directory of the git repo
@@ -56,6 +56,7 @@
                         unstablePkgs.warp-terminal
                         unstablePkgs.zed-editor
                         unstablePkgs.jetbrains.clion
+                        inputs.zen-browser.packages."${system}".generic
                       ];
                     }
 
@@ -71,7 +72,6 @@
                 # Then enable this
                 specialArgs = {
                     nixos-06cb-009a-fingerprint-sensor = nixos-06cb-009a-fingerprint-sensor;
-                    zen-browser = zen-browser;
                 };
             };
         };
