@@ -68,7 +68,6 @@
   home.packages = with pkgs; [
     kitty
     tmux
-    netbird-ui
     # Add other packages you want to install for your user here
   ];
 #  programs.kitty = {
