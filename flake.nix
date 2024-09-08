@@ -4,7 +4,7 @@
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-24.05";
         nixos-23-11.url = "nixpkgs/nixos-23.11";
-	      nixpkgs-unstable.url = "nixpkgs/nixos-unstable"; # Add unstable nixpkgs
+	      nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
         nixos-06cb-009a-fingerprint-sensor = {
             url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor";
             inputs.nixpkgs.follows = "nixos-23-11";
@@ -24,7 +24,6 @@
         let
             lib = nixpkgs.lib;
 	          system = "x86_64-linux";  # Define the system architecture
-#            config.allowUnfree = true;
     	      pkgs = import nixpkgs {
       		    inherit system;
               config.allowUnfree = true;
@@ -39,10 +38,6 @@
               config.allowUnfree = true;
             };
             homepkgs = nixpkgs.legacyPackages.${system};
-#            homePkgs = import home-manager {
-#                inherit system;
-#                modules = [ home-manager.nixosModules.home-manager ];
-#            };
         in {
         nixosConfigurations = {
             ChadBook = lib.nixosSystem {
@@ -85,6 +80,8 @@
 #                  home-manager.users.filipe = import ./home.nix;
 #              }
             ];
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
           };
         };
     };
