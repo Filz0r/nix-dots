@@ -55,6 +55,9 @@ services.smartd = {
       loader.timeout = 0;
 
     };
+    home-manager.useGlobalPkgs = true;
+    home-manager.useUserPackages = true;
+    home-manager.users.filipe = import ./home.nix;
 
 
   networking.hostName = "ChadBook"; # Define your hostname.

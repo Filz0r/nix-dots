@@ -69,21 +69,21 @@
                 };
             };
         };
-        homeConfigurations = {
-          filipe = home-manager.lib.homeManagerConfiguration {
-            inherit homepkgs; 
-            modules = [
-              ./home.nix 
+        #homeConfigurations = {
+        #  filipe = home-manager.lib.homeManagerConfiguration {
+        #    inherit homepkgs; 
+        #    modules = [
+        #      ./home.nix 
 #              {
 #                  home-manager.useGlobalPkgs = true;
 #                  home-manager.useUserPackages = true;
 #                  home-manager.users.filipe = import ./home.nix;
 #              }
-            ];
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.filipe = import ./home.nix;
-          };
-        };
+        #    ];
+#            home-manager.useGlobalPkgs = true;
+#            home-manager.useUserPackages = true;
+#            home-manager.users.filipe = import ./home.nix;
+         # };
+        #};
     };
 }
