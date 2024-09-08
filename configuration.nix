@@ -55,10 +55,7 @@ services.smartd = {
       loader.timeout = 0;
 
     };
-    home-manager.useGlobalPkgs = true;
-    home-manager.useUserPackages = true;
-    home-manager.users.filipe = import ./home.nix;
-
+    
 
   networking.hostName = "ChadBook"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -69,6 +66,9 @@ services.smartd = {
 
   # Enable networking
   networking.networkmanager.enable = true;
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.users.filipe = import ./home.nix;
 
   # Set your time zone.
   time.timeZone = "Europe/Lisbon";
