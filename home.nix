@@ -91,11 +91,11 @@
 
  # };
 
-  #programs.kitty.settings = {
-  #    scrollback_lines = 25000;
-  #    enable_audio_bell = false;
-  #    update_check_interval = 0;
-  #  };
+  programs.kitty.settings = {
+      scrollback_lines = 25000;
+      enable_audio_bell = false;
+      update_check_interval = 0;
+  };
   # Example configuration for managing dotfiles
 #  home.file.".zshrc".source = ./dotfiles/zshrc;
 
