@@ -24,7 +24,7 @@
         let
             lib = nixpkgs.lib;
 	          system = "x86_64-linux";  # Define the system architecture
-            config.allowUnfree = true;
+#            config.allowUnfree = true;
     	      pkgs = import nixpkgs {
       		    inherit system;
               config.allowUnfree = true;
