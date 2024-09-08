@@ -66,6 +66,7 @@
                 # Then enable this
                 specialArgs = {
                     nixos-06cb-009a-fingerprint-sensor = nixos-06cb-009a-fingerprint-sensor;
+                    home-manager = home-manager;
                 };
             };
         };
