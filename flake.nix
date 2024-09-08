@@ -61,6 +61,7 @@
                         unstablePkgs.jetbrains.clion
                       ];
                     }
+                    home-manager
 
                 ];
                 # Then enable this
