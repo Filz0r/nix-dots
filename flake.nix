@@ -56,8 +56,10 @@
                         unstablePkgs.warp-terminal
                         unstablePkgs.zed-editor
                         unstablePkgs.jetbrains.clion
+                        unstablePkgs.jetbrains.gateway
                         unstablePkgs.netbird-ui
                         unstablePkgs.netbird
+                        virt-viewer
                         zen-browser.packages."${system}".generic
                       ];
                     }
