@@ -59,6 +59,7 @@
                         unstablePkgs.jetbrains.gateway
                         unstablePkgs.netbird-ui
                         unstablePkgs.netbird
+                        unstablePkgs.gh
                         virt-viewer
                         zen-browser.packages."${system}".generic
                       ];
