@@ -89,6 +89,7 @@ services.smartd = {
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.netbird.enable = true;
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
