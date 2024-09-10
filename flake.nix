@@ -55,8 +55,8 @@
 #                        home-manager
                         unstablePkgs.warp-terminal
                         unstablePkgs.zed-editor
-                        unstablePkgs.jetbrains.clion
-                        unstablePkgs.jetbrains.gateway
+#                        unstablePkgs.jetbrains.clion
+#                        unstablePkgs.jetbrains.gateway
                         unstablePkgs.jetbrains-toolbox
                         unstablePkgs.netbird-ui
                         unstablePkgs.gh
