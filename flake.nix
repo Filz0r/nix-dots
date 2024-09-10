@@ -57,6 +57,7 @@
                         unstablePkgs.zed-editor
                         unstablePkgs.jetbrains.clion
                         unstablePkgs.jetbrains.gateway
+                        unstablePkgs.jetbrains.fleet
                         unstablePkgs.netbird-ui
                         unstablePkgs.gh
                         virt-viewer
