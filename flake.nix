@@ -61,6 +61,7 @@
                         unstablePkgs.netbird-ui
                         unstablePkgs.gh
                         virt-viewer
+                        hexchat
                         zen-browser.packages."${system}".generic
                       ];
                     }
