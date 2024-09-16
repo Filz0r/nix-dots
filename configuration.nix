@@ -69,6 +69,9 @@ services.smartd = {
   # Set your time zone.
   time.timeZone = "Europe/Lisbon";
 
+  nixpkgs.config.firefox.enableGnomeExtensions = true;
+  services.gnome3.chrome-gnome-shell.enable = true;
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
 
