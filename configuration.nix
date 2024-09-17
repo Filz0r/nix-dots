@@ -120,12 +120,13 @@ services.smartd = {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "filipe";
-    extraGroups = [ "networkmanager" "wheel" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "docker" ];
   };
 
-  programs.nix-ld.enable = true;
+    virtualisation.docker.enable = true;
+    programs.nix-ld.enable = true;
     programs.nix-ld.libraries = with pkgs; [
-        curl
+      curl
     expat
     fontconfig
     freetype
