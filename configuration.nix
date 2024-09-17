@@ -123,7 +123,7 @@ services.smartd = {
     extraGroups = [ "networkmanager" "wheel" "dialout" ];
   };
 
-
+  programs.nix-ld.enable = true;
     programs.nix-ld.libraries = with pkgs; [
       SDL
       SDL2
