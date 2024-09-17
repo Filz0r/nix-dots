@@ -12,7 +12,10 @@
   gcc
   glibc
   man-pages
-  thonny
+     python3
+    python311Packages.pip
+    python311Packages.django
+ thonny
   #jetbrains.clion
  ];
 
