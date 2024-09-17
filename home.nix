@@ -68,6 +68,8 @@
   home.packages = with pkgs; [
     kitty
     tmux
+    python3
+    python311Packages.django
     # Add other packages you want to install for your user here
   ];
 #  programs.kitty = {
