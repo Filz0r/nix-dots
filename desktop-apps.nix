@@ -10,6 +10,7 @@
     mpv
     pika-backup
     thunderbird
+    google-chrome
 #    kitty
 #    kitty-img
 #    kitty-themes
