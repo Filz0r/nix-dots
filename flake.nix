@@ -58,7 +58,7 @@
 #                        unstablePkgs.jetbrains.clion
 #                        unstablePkgs.jetbrains.gateway
                         unstablePkgs.jetbrains-toolbox
-                        unstablePkgs.tailscale
+                        unstablePkgs.spacedrive
                         unstablePkgs.gh
                         virt-viewer
                         hexchat
