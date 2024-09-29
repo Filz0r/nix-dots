@@ -13,7 +13,9 @@
     enable = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-
+    initExtra = ''
+    	. "$HOME/.cargo/env	
+    '';
     shellAliases = {
       lr = "ls -lR";
       lra = "ls -lRa";
