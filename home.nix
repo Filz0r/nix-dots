@@ -14,7 +14,7 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initExtra = ''
-    	. "$HOME/.cargo/env	
+    	. "$HOME/.cargo/env"	
     '';
     shellAliases = {
       lr = "ls -lR";
