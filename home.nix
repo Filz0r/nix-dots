@@ -14,7 +14,8 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initExtra = ''
-    	. "$HOME/.cargo/env"	
+        export FLYCTL_INSTALL="/home/filipe/.fly"
+        export PATH="$FLYCTL_INSTALL/bin:$PATH"
     '';
     shellAliases = {
       lr = "ls -lR";
